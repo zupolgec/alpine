@@ -116,6 +116,10 @@ function isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers) {
 }
 
 function keyToModifier(key) {
+    if (typeof key !== 'string') {
+        return key
+    }
+
     switch (key) {
         case '/':
             return 'slash'

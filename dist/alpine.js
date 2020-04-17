@@ -786,6 +786,10 @@
   }
 
   function keyToModifier(key) {
+    if (typeof key !== 'string') {
+      return key;
+    }
+
     switch (key) {
       case '/':
         return 'slash';
